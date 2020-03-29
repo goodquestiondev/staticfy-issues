@@ -1,0 +1,16 @@
+name: "Staticfy Issues"
+description: "This action creates static files for every issue created including the title, content and comments in GH mardown format"
+main: "dist/index.js"
+inputs:
+  folder-name:
+    description: "The folder to save the files"
+    required: true
+    default: "issues"
+outputs:
+  time:
+    description: "The time we created the file"
+  fileName:
+    description: "The name of the file"
+runs:
+  using: "node12"
+  main: "index.js"
